@@ -4,6 +4,8 @@ Resistor 47k d2 to ground
 1 ac winding to 22k redistor to d2
 Ground connected to -minvdc after 3 phase rectifier
 
+https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230122_225828.jpg
+
 unsigned long count = 0;
 unsigned long rotations = 0;
 unsigned long startmillis, stopmillis;
