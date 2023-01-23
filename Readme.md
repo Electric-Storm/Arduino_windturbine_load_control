@@ -21,6 +21,7 @@ Arduino windturbine rpm speed rotation counter
 
 <img src="https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/20230122_225828.jpg">
 
+https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Arduino_windturbine_RPM.ino
 
 Arduino windturbine monitor
 
