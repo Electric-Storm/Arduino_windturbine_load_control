@@ -15,3 +15,11 @@ Arduino voltage activated switch
 Arduino windturbine dump load switch
 
 Arduino windturbine dump load manager
+
+
+Arduino windturbine rpm speed rotation counter
+
+<img src="https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/20230122_225828.jpg">
+
+
+Arduino windturbine monitor
