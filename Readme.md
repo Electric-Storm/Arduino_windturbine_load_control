@@ -23,3 +23,5 @@ Arduino windturbine rpm speed rotation counter
 
 
 Arduino windturbine monitor
+
+https://youtube.com/shorts/bZ22Pmo-ms4?feature=share
