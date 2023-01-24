@@ -20,9 +20,12 @@ void loop() {
 
   if (digitalRead(2)) {
     count++;
+    delay(1);
     while (digitalRead(2)) {
       digitalWrite(13, 1);
+      delay(1)
     }
+    delay(1)
   }
   
   if (count == 6) { // 6 pulses = 1 rotation
