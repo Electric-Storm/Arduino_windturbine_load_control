@@ -1,5 +1,6 @@
 Zenerdiode 5.1v d2 to ground
 Resistor 47k d2 to ground
+Maybe add capacitor 100 a 200 nanofarad d2 to ground
 
 1 ac winding to 22k redistor to d2
 Ground connected to -minvdc after 3 phase rectifier
