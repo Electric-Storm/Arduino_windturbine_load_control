@@ -3,6 +3,7 @@
 https://github.com/Electric-Storm/Arduino_windturbine_load_control
 
 RPM sense from AC phase windturbine
+Treid it with a cheap chinese 12v and 24v windturbine
 
 Zenerdiode 5.1v d2 to ground
 Resistor 47k d2 to ground
