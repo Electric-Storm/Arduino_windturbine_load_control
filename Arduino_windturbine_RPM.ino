@@ -6,6 +6,9 @@ Maybe add capacitor 100 a 200 nanofarad d2 to ground
 Ground connected to -minvdc after 3 phase rectifier
 
 https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230122_225828.jpg
+Add Capacitor?
+https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230124_173444.jpg
+
 
 unsigned long count = 0;
 unsigned long rotations = 0;
