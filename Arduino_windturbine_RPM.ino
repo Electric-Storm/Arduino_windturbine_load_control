@@ -2,6 +2,8 @@
 
 https://github.com/Electric-Storm/Arduino_windturbine_load_control
 
+https://facebook.com/luberth.dijkman
+
 RPM sense from AC phase windturbine
 Treid it with a cheap chinese 12v and 24v windturbine
 
