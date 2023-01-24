@@ -1,3 +1,8 @@
+
+
+https://github.com/Electric-Storm/Arduino_windturbine_load_control
+
+
 Zenerdiode 5.1v d2 to ground
 Resistor 47k d2 to ground
 Maybe add capacitor 100 a 200 nanofarad d2 to ground
