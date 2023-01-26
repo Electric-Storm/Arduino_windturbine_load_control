@@ -2,7 +2,7 @@
 
 // Adrduino windturbine VAC hz rpm
 //
-//
+// https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Final_Hz_RPM_windturbine.ino
 //
 // https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
 // 
@@ -35,7 +35,7 @@ void loop()
     Serial.print(" us  ");
     Serial.print(acFrequency, 3);
     Serial.print(" Hz ");
-    Serial.print((acFrequency/6)*60, 0);
+    Serial.print((acFrequency/6)*60, 0); // 6 pulses per rotation x 60 seconds
     Serial.println(" RPM ");
     acCount = 0;
     testState = 0;        // clear testState
