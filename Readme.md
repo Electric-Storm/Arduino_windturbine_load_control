@@ -1,6 +1,7 @@
 
 https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Final_Hz_RPM_windturbine.ino
 
+<IMG SRC="https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg">
 
 
 Arduino LVD
