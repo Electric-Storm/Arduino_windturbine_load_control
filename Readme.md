@@ -1,3 +1,8 @@
+
+https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Final_Hz_RPM_windturbine.ino
+
+
+
 Arduino LVD
 
 Arduiono low voltage disconnect
