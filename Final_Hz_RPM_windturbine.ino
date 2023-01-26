@@ -1,6 +1,6 @@
 8
 
-// Adrduino windturbine VAC hz rpm
+// Adrduino windturbine ssense AC phase for hz and rpm
 //
 // https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Final_Hz_RPM_windturbine.ino
 //
