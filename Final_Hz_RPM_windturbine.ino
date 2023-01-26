@@ -14,7 +14,10 @@
 
 
 
-// code https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
+// code dlloyd 
+// https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
+// https://github.com/Dlloydev/QuickPID
+
 
 const byte acInputPin = 2;
 const byte acCycles = 10;
