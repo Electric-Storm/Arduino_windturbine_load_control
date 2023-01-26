@@ -13,6 +13,9 @@
 // https://youtube.com/shorts/Os1BZ1X1qRw?feature=share
 
 
+
+// code https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
+
 const byte acInputPin = 2;
 const byte acCycles = 10;
 volatile unsigned long startTime, stopTime;
