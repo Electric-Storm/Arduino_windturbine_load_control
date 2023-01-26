@@ -2,6 +2,10 @@
 
 // 230vac transformer 24vac 50 hz
 // added a 10k to d2
+// https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
+// replaced the windturbine for 230vac to 24vac transformer
+// test to see if it displays 50hz
+// https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 
 
 const byte acInputPin = 2;
