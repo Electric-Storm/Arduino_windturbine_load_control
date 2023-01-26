@@ -1,4 +1,4 @@
-
+8
 
 // Adrduino windturbine VAC hz rpm
 //
@@ -7,6 +7,11 @@
 // https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
 // 
 // https://youtube.com/shorts/yP8ffLpqSI4?feature=share
+//
+// inside the cheap chinese windturbine 12 magnets 
+// 6pulses per rotation
+// https://youtube.com/shorts/Os1BZ1X1qRw?feature=share
+
 
 const byte acInputPin = 2;
 const byte acCycles = 10;
