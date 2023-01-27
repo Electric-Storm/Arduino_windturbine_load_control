@@ -19,6 +19,7 @@
 // https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
 // https://github.com/Dlloydev
 
+// only pin D2 and D3 are interrupt inputs on arduino nano / uno
 
 const byte acInputPin = 2;
 const byte acCycles = 10;
