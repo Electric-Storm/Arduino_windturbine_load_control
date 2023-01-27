@@ -7,6 +7,8 @@ https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Fin
 
 https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 
+<img src="https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/Screenshot_20230127-174449_Gallery.jpg">
+
 ##
 --
 
