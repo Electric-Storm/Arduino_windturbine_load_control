@@ -12,7 +12,7 @@
 // 6pulses per rotation
 // https://youtube.com/shorts/Os1BZ1X1qRw?feature=share
 
-// https://youtube.com/shorts/YMxiC3jbnqM?feature=share
+// https://youtube.com/shorts/aOyUxGy2dfM?feature=share
 
 // code dlloyd 
 // https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
