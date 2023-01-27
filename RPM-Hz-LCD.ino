@@ -14,7 +14,11 @@
 //
 // 12volt windturbine hz rpm LCD test
 // https://youtube.com/shorts/aOyUxGy2dfM?feature=share
-
+//
+// the 12volt display rpm is better as 24volt windturbine
+// maybe a diode on D2
+// do not have the tools to check if rpm is correct
+//
 // code dlloyd 
 // https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
 // https://github.com/Dlloydev
