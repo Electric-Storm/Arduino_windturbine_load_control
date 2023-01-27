@@ -11,7 +11,8 @@
 // inside the cheap chinese windturbine 12 magnets 
 // 6pulses per rotation
 // https://youtube.com/shorts/Os1BZ1X1qRw?feature=share
-
+//
+// 12volt windturbine hz rpm LCD test
 // https://youtube.com/shorts/aOyUxGy2dfM?feature=share
 
 // code dlloyd 
