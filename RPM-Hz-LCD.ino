@@ -1,11 +1,24 @@
 
-
-// Adrduino windturbine VAC hz rpm
+// Arduino windturbine sense AC phase for hz and rpm
 //
+// https://github.com/Electric-Storm/Arduino_windturbine_load_control/blob/main/Final_Hz_RPM_windturbine.ino
+//
+// schema circuit drawing
 // https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
-// replaced the windturbine for 230vac to 24vac transformer
-// test to see if it displays 50hz
+// 
 // https://youtube.com/shorts/yP8ffLpqSI4?feature=share
+//
+// inside the cheap chinese windturbine 12 magnets 
+// 6pulses per rotation
+// https://youtube.com/shorts/Os1BZ1X1qRw?feature=share
+
+// https://youtube.com/shorts/YMxiC3jbnqM?feature=share
+
+// code dlloyd 
+// https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
+// https://github.com/Dlloydev
+
+// only pin D2 and D3 are interrupt inputs on arduino nano / uno
 
 const byte acInputPin = 2;
 const byte acCycles = 10;
