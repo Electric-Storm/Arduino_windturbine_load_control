@@ -49,11 +49,14 @@ void loop()
     Serial.print(" Hz ");
     Serial.print((acFrequency/6)*60, 0); // 6 pulses per rotation x 60 seconds
     Serial.println(" RPM ");
+noInterrupts(); // added
     acCount = 0;
     testState = 0;        // clear testState
     EIFR |= bit(INTF0);   // clear INT0 interrupt flag
     EIMSK |= bit(INT0);   // enable INT0 interrupt
-  }
+  
+interrupts(); // added
+}
 }
 
 void acMeasure() {
