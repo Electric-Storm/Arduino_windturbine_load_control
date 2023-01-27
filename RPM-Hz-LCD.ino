@@ -26,10 +26,11 @@ volatile unsigned long startTime, stopTime;
 volatile byte acCount, testState;
 unsigned long acPeriod;
 float acFrequency;
+
 #include <LiquidCrystal_I2C.h>       // Include LiquidCrystal_I2C library
 // https://github.com/marcoschwartz/LiquidCrystal_I2C/archive/master.zip
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Configure LiquidCrystal_I2C library with 0x27 address, 16 columns and 2 rows
+LiquidCrystal_I2C lcd(0x27, 20, 4);  // Configure LiquidCrystal_I2C library with 0x27 address, 20 columns and 4 rows
 
 void setup()
 {
@@ -42,6 +43,7 @@ void setup()
 
   lcd.backlight();                    // Turn backlight ON
   lcd.clear();
+
   lcd.setCursor(0, 0);
   lcd.print("WindTurbine Hz & RPM");
 }
