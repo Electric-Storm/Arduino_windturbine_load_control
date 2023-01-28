@@ -5,6 +5,7 @@
 //
 // schema circuit drawing
 // https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
+// for 24v windturbine i replaced 22k for 150k ohm
 // 
 // https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 //
