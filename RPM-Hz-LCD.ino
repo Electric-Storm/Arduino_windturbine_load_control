@@ -55,8 +55,8 @@ float acFrequency;
 
 // voltage divider for analog A2 DC side
 float vPow = 4.75;      // measured on vref to ground with multimeter
-float r1 = 200000;      // 200k
-float r2 = 10000;       // 10k
+float r1 = 200000;      // 200k +vdc to a2
+float r2 = 10000;       // 10k  -vdc to a2
 
 
 #include <LiquidCrystal_I2C.h>       // Include LiquidCrystal_I2C library
