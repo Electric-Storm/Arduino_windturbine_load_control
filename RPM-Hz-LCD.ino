@@ -16,8 +16,11 @@
 // https://youtube.com/shorts/aOyUxGy2dfM?feature=share
 //
 // the 12volt display rpm is better as 24volt windturbine
-// maybe a diode on D2
+// if i replace the AC sense 22k for 150k ohm resistor
+// the hz/rpm count looks ok for 24volt windturbine
 // do not have the tools to check if rpm is correct
+// did a 50hz 230 to 24vac grid check
+// https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 //
 // code dlloyd 
 // https://forum.arduino.cc/t/about-measuring-ac-frequency-with-digital-input/400271
