@@ -25,17 +25,25 @@
 
 // only pin D2 and D3 are interrupt inputs on arduino nano / uno
 
+
+
+// Adrduino windturbine VAC hz rpm
+//
+// https://raw.githubusercontent.com/Electric-Storm/Arduino_windturbine_load_control/main/20230126_181058.jpg
+// replaced the windturbine for 230vac to 24vac transformer
+// test to see if it displays 50hz
+// https://youtube.com/shorts/yP8ffLpqSI4?feature=share
+
 const byte acInputPin = 2;
 const byte acCycles = 10;
 volatile unsigned long startTime, stopTime;
 volatile byte acCount, testState;
 unsigned long acPeriod;
 float acFrequency;
-
 #include <LiquidCrystal_I2C.h>       // Include LiquidCrystal_I2C library
 // https://github.com/marcoschwartz/LiquidCrystal_I2C/archive/master.zip
 
-LiquidCrystal_I2C lcd(0x27, 20, 4);  // Configure LiquidCrystal_I2C library with 0x27 address, 20 columns and 4 rows
+LiquidCrystal_I2C lcd(0x27, 20, 4);  // Configure LiquidCrystal_I2C library with 0x27 address, 16 columns and 2 rows
 
 void setup()
 {
@@ -48,7 +56,6 @@ void setup()
 
   lcd.backlight();                    // Turn backlight ON
   lcd.clear();
-
   lcd.setCursor(0, 0);
   lcd.print("WindTurbine Hz & RPM");
 }
@@ -98,3 +105,4 @@ void acMeasure() {
       break;
   }
 }
+
