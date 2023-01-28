@@ -34,6 +34,7 @@
 // test to see if it displays 50hz
 // https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 
+
 const byte acInputPin = 2;
 const byte acCycles = 10;
 volatile unsigned long startTime, stopTime;
@@ -62,6 +63,14 @@ void setup()
 
 void loop()
 {
+  if (testState == 1) {
+    if (micros() - startTime >= 1000000) {
+      lcd.setCursor(6, 2);
+      lcd.print("0 Hz        ");
+      lcd.setCursor(6, 3);
+      lcd.print("0 RPM       ");
+    }
+  }
   if (testState == 2) {    // testing completed, results are ready
     EIMSK &= ~bit(INT0);   // disable INT0 interrupt
     // calculate and print
@@ -77,10 +86,10 @@ void loop()
     //Serial.println(" RPM ");
     lcd.setCursor(6, 2);
     lcd.print(acFrequency, 2);
-    lcd.print(" Hz");
+    lcd.print(" Hz   ");
     lcd.setCursor(6, 3);
     lcd.print((acFrequency / 6) * 60, 0);
-    lcd.print(" RPM");
+    lcd.print(" RPM   ");
     noInterrupts();       // <--- added
     acCount = 0;
     testState = 0;        // clear testState
@@ -95,6 +104,7 @@ void acMeasure() {
     case 0:
       startTime = micros();
       testState = 1;
+
       break;
     case 1:
       acCount++;
@@ -105,4 +115,5 @@ void acMeasure() {
       break;
   }
 }
+
 
