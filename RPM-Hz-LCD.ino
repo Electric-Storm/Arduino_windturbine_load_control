@@ -88,7 +88,7 @@ void loop()
     lcd.print(acFrequency, 2);
     lcd.print(" Hz   ");
     lcd.setCursor(6, 3);
-    lcd.print((acFrequency / 6) * 60, 0);
+    lcd.print((acFrequency / 6) * 60, 0); // 6 puls per rotation x60 seconds could be hzx10=rpm
     lcd.print(" RPM   ");
     noInterrupts();       // <--- added
     acCount = 0;
