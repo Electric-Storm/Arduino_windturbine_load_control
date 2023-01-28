@@ -45,12 +45,20 @@
 // https://youtube.com/shorts/yP8ffLpqSI4?feature=share
 
 
+
 const byte acInputPin = 2;
-const byte acCycles = 10;
+const byte acCycles = 12;
 volatile unsigned long startTime, stopTime;
 volatile byte acCount, testState;
 unsigned long acPeriod;
 float acFrequency;
+
+// voltage divider for analog A2 DC side
+float vPow = 4.75;      // measured on vref to ground with multimeter
+float r1 = 200000;      // 200k
+float r2 = 10000;       // 10k
+
+
 #include <LiquidCrystal_I2C.h>       // Include LiquidCrystal_I2C library
 // https://github.com/marcoschwartz/LiquidCrystal_I2C/archive/master.zip
 
@@ -62,6 +70,14 @@ void setup()
   pinMode(acInputPin, INPUT);
   attachInterrupt(digitalPinToInterrupt(acInputPin), acMeasure, RISING);
 
+  Serial.println("--------------------");
+  Serial.println("WindTurbine Hz RPM Volt DC");
+  Serial.println("DC VOLTMETER");
+  Serial.print("Maximum Voltage: ");
+  Serial.print((int)(vPow / (r2 / (r1 + r2))));
+  Serial.println("V");
+  Serial.println("--------------------");
+  Serial.println("");
 
   lcd.begin();                        // A4 and A5 is i2c for lcd i2c backpack pcf8574
 
@@ -69,18 +85,12 @@ void setup()
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("WindTurbine Hz & RPM");
+  lcd.setCursor(6, 1);
+  lcd.print("--       VDC");
 }
 
 void loop()
 {
-  if (testState == 1) {
-    if (micros() - startTime >= 1000000) {
-      lcd.setCursor(6, 2);
-      lcd.print("0 Hz        ");
-      lcd.setCursor(6, 3);
-      lcd.print("0 RPM       ");
-    }
-  }
   if (testState == 2) {    // testing completed, results are ready
     EIMSK &= ~bit(INT0);   // disable INT0 interrupt
     // calculate and print
@@ -95,11 +105,31 @@ void loop()
     //Serial.print((acFrequency/6)*60, 0);
     //Serial.println(" RPM ");
     lcd.setCursor(6, 2);
-    lcd.print(acFrequency, 2);
-    lcd.print(" Hz   ");
+    // if (acFrequency <10){lcd.print(" ");}
+    // if (acFrequency<100){lcd.print(" ");}
+    lcd.print(acFrequency, 1); lcd.print("  ");
+    lcd.setCursor(15, 2);
+    lcd.print("Hz");
     lcd.setCursor(6, 3);
-    lcd.print((acFrequency / 6) * 60, 0); // 6 puls per rotation x60 seconds could be hzx10=rpm
-    lcd.print(" RPM   ");
+    //float rpm=(acFrequency / 6) * 60;
+    float rpm = (acFrequency) * 10;
+    //if (rpm <10){lcd.print(" ");}
+    //if (rpm<100){lcd.print(" ");}
+    //if (rpm<1000){lcd.print(" ");}
+    lcd.print(rpm, 0); lcd.print("  ");
+    lcd.setCursor(15, 3);
+    lcd.print("RPM");
+
+    int sensorValue = analogRead(A2);
+    Serial.println(sensorValue);
+    float v = (sensorValue * vPow) / 1024.0;
+    float voltage = v / (r2 / (r1 + r2));
+   
+    lcd.setCursor(6, 1);
+    lcd.print(voltage, 1);
+   
+    delay(500);
+   
     noInterrupts();       // <--- added
     acCount = 0;
     testState = 0;        // clear testState
@@ -125,5 +155,3 @@ void acMeasure() {
       break;
   }
 }
-
-
